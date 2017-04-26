@@ -1,11 +1,11 @@
-from flask import Flask 
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 
-@app.route("/")
+@app.route("/", methods=["GET"])
 def home():
-    return "Hello there!"
+    return render_template("home.html", title="Rowie's Home Page")
 
 
 @app.route("/admin")
@@ -21,3 +21,7 @@ def new_post():
 @app.route("/archive")
 def archive():
     return "Archive."
+
+
+if __name__ == "__main__":
+    app.run(debug=None)
