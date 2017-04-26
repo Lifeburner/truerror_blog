@@ -1,16 +1,9 @@
 {% extends "base.html" %}
 {% block body %}
-<div id="header" class="col-xs-12">
-    <h1>This is another placeholder</h1>
-    <div id="navbar" class="col-xs-12"></div>
-    <div id="face" class="col-xs-12"></div>
-</div>
+{% include "header.html" %}
 <div id="body" class="col-xs-12">
     <div id="title" class="col-xs-12"></div>
     <div id="content" class="col-xs-12"></div>
 </div>
-<div id="footer" class="col-xs-12">
-    <div id="contact" class="col-xs-12"></div>
-    <div id="credit" class="col-xs-12"></div>
-</div>
-{% endblock %}
+{% include "footer.html" %}
+{% endblock body %}
