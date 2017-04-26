@@ -8,9 +8,9 @@ def home():
     return render_template("home.html", title="Rowie's Home Page")
 
 
-@app.route("/admin")
+@app.route("/admin", methods=["GET", "PUT"])
 def admin():
-    return "Admin page here."
+    return render_template("admin.html")
 
 
 @app.route("/admin/newpost")
