@@ -1,1 +1,1 @@
-web:waitress-serve truerror:app
+web:waitress-serve main:app
